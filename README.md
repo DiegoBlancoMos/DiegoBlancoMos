@@ -1,6 +1,8 @@
 <a href="https://es.besoccer.com/">
-      <img src="https://company.besoccer.com/img/imagotipo/logo-besoccer.svg?v=1" alt="BeSoccer">
+      <img src="https://company.besoccer.com/img/imagotipo/logo-besoccer.svg?v=1"  alt="BeSoccer">
 </a>
+
+<a href="https://x.com/besoccer_es"><img src="https://logos-world.net/wp-content/uploads/2023/08/X-Logo.png" align="right" alt="Twitter Follow" /></a>
 
 ## Índice
 
@@ -14,11 +16,11 @@ BeSoccer es a día de hoy el proyecto que lidera la información de fútbol a ni
 
 > BeSoccer es una aplicación muy fácil de usar ya que dispone de una interfaz intuitiva y sencilla.
 
-- ****
+- **Gran Variedad de Competiciones**
 
-> Docusaurus ships with [localization support](https://docusaurus.io/docs/i18n/introduction) via CrowdIn. Empower and grow your international community by translating your documentation.
+> Desde BeSoccer se pueden seguir más de 10.000 competiciones.
 
-- **Customizable**
+- **Variedad de Contenido**
 
-> While Docusaurus ships with the key pages and sections you need to get started, including a home page, a docs section, a [blog](https://docusaurus.io/docs/blog), and additional support pages, it is also [customizable](https://docusaurus.io/docs/creating-pages) as well to ensure you have a site that is [uniquely yours](https://docusaurus.io/docs/styling-layout).
+> Desde BeSoccer no sólo podrás seguir diferentes competiciones, también dispone de noticias, estadísticas y movimientos en el mercadfo de fichajes y mucho más.
 
