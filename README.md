@@ -2,16 +2,21 @@
       <img src="https://company.besoccer.com/img/imagotipo/logo-besoccer.svg?v=1"  alt="BeSoccer">
 </a>
 
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Version-7.8-blue" width="200" height="66" alt="Versión" /></a>
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Descargas-%2B10M-green" width="200" height="66" alt="Descargas"/></a>
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Mejor%20App-2016-pink" width="200" height="66" alt="Versión" /></a>
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Noticias%20A%C3%B1o-%2B250k-purple" width="200" height="66" alt="Versión" /></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Version-7.8-blue" width="200" height="60" alt="Versión" /></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Descargas-%2B10M-green" width="197" height="60" alt="Descargas"/></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Mejor%20App-2016-pink" width="200" height="60" alt="MejorApp" /></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Noticias%20A%C3%B1o-%2B250k-purple" width="197" height="60" alt="Noticias" /></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Cobertura-%2B24%2F7-yellow" width="200" height="60" alt="Cobertura" /></a>
 
 # Índice   
 
 Descripción
 
 Estado del proyecto
+
+Demostración de Funciones
+
+Acceso al Proyecto
 
 
 # Descripción del Poyecto
