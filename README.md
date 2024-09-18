@@ -2,7 +2,10 @@
       <img src="https://company.besoccer.com/img/imagotipo/logo-besoccer.svg?v=1"  alt="BeSoccer">
 </a>
 
-<a href="https://x.com/besoccer_es"><img src="https://logos-world.net/wp-content/uploads/2023/08/X-Logo.png" width="40" height="20" align="right" alt="Twitter Follow" /></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Version-7.8-blue" width="200" height="66" alt="Versión" /></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Descargas-%2B10M-green" width="200" height="66" alt="Descargas"/></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Mejor%20App-2016-pink" width="200" height="66" alt="Versión" /></a>
+<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Noticias%20A%C3%B1o-%2B250k-purple" width="200" height="66" alt="Versión" /></a>
 
 # Índice   
 
@@ -35,12 +38,15 @@ BeSoccer se encuentra en constante desarrollo pese a ser líder en el sector, pa
 
 # Demostración de Funciones
 
-<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen01_es.webp"  align="left" alt="Consulta Resultados" width="310" height="600"/></a>
-<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen03_es.webp"  align="left" alt="Consulta Resultados" width="310" height="600"/></a>
-<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen04_es.webp"  align="left" alt="Consulta Resultados" width="310" height="600"/></a>
+<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen01_es.webp"  align="left" alt="Consulta Resultados" width="315" height="600"/></a>
+<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen03_es.webp"  align="left" alt="Consulta Resultados" width="315" height="600"/></a>
+<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen04_es.webp"  align="left" alt="Consulta Resultados" width="315" height="600"/></a>
+
 
 # Acceso al Proyecto
 
 BeSoccer es completamente gratuito, pudiendose intalar en todo tipo de dispositivos.
 
-<a href="https://play.google.com/store/apps/details?id=com.resultadosfutbol.mobile&referrer=utm_source%3Dlanding_es%26utm_medium%3Dboton_descarga"><img src="https://company.besoccer.com/img/app-google.png" width="600" height="300" align="left" alt="Download APP" /></a>
+<a href="https://play.google.com/store/apps/details?id=com.resultadosfutbol.mobile&referrer=utm_source%3Dlanding_es%26utm_medium%3Dboton_descarga"><img src="https://company.besoccer.com/img/app-google.png" width="150" height="75" align="right" alt="Download APP" /></a>
+
+
