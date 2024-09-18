@@ -4,13 +4,14 @@
 
 <a href="https://x.com/besoccer_es"><img src="https://logos-world.net/wp-content/uploads/2023/08/X-Logo.png" width="40" height="20" align="right" alt="Twitter Follow" /></a>
 
-<a href="https://play.google.com/store/apps/details?id=com.resultadosfutbol.mobile&referrer=utm_source%3Dlanding_es%26utm_medium%3Dboton_descarga"><img src="https://company.besoccer.com/img/app-google.png" width="40" height="20" align="left" alt="Download APP" /></a>
+<a href="https://play.google.com/store/apps/details?id=com.resultadosfutbol.mobile&referrer=utm_source%3Dlanding_es%26utm_medium%3Dboton_descarga"><img src="https://company.besoccer.com/img/app-google.png" width="60" height="30" align="left" alt="Download APP" /></a>
 
-# Índice
 
-[Descripción](#Descripción del Proyecto)
+# Índice   
 
-[Estado del proyecto](#Estado del proyecto)
+Descripción
+
+Estado del proyecto
 
 
 # Descripción del Poyecto
@@ -32,4 +33,12 @@ BeSoccer es a día de hoy el proyecto que lidera la información de fútbol a ni
 > Desde BeSoccer no sólo podrás seguir diferentes competiciones, también dispone de noticias, estadísticas y movimientos en el mercadfo de fichajes y mucho más. Datos siempre actualizados, BeSoccer cuenta con la más completa y mayor base de datos del mundo sobre fútbol.
 
 # Estado del proyecto
+
+BeSoccer se encuentra en constante desarrollo pese a ser líder en el sector, para así poder seguir creciendo y consiguiendo nuevos clientes. 
+
+# Demostración de Funciones
+
+<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen01_es.webp"  align="left" alt="Consulta Resultados" width="310" height="600"/></a>
+<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen03_es.webp"  align="left" alt="Consulta Resultados" width="310" height="600"/></a>
+<a href="https://x.com/besoccer_es"><img src="https://company.besoccer.com/img/screen-app/screen04_es.webp"  align="left" alt="Consulta Resultados" width="310" height="600"/></a>
 
