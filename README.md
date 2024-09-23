@@ -2,12 +2,6 @@
       <img src="https://company.besoccer.com/img/imagotipo/logo-besoccer.svg?v=1"  alt="BeSoccer">
 </a>
 
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Version-7.8-blue" width="180" height="60" alt="Versión" /></a>
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Descargas-%2B10M-green" width="180" height="60" alt="Descargas"/></a>
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Mejor%20App-2016-pink" width="180" height="60" alt="MejorApp" /></a>
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Noticias%20A%C3%B1o-%2B250k-purple" width="180" height="60" alt="Noticias" /></a>
-<a href="https://x.com/besoccer_es"><img src="https://img.shields.io/badge/Cobertura-%2B24%2F7-yellow" width="180" height="60" alt="Cobertura" /></a>
-
 ## BeSoccer - La App de Fútbol Definitiva ⚽
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)](https://besoccer.com) 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) 
@@ -55,7 +49,8 @@ Algunas de las características clave incluyen:
 3. **Noticias**: Mantente al día con las últimas noticias del fútbol mundial.
 4. **Calendarios y Clasificaciones**: Consulta los próximos partidos, resultados anteriores y las clasificaciones de las principales ligas y competiciones.
 
-![Demostración de BeSoccer](https://cdn.besoccer.com/apps/img/bg/home_v3.png)
+![Funcionalidades BeSoccer](https://company.besoccer.com/img/screen-app/screen03_es.webp)
+![Funcionalidades BeSoccer](https://company.besoccer.com/img/screen-app/screen01_es.webp)
 
 ---
 
