@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://h2ldrbpyaq2h"]
+
+[ext_resource type="Script" path="res://scripts/geodude.gd" id="1_lycrm"]
+[ext_resource type="Texture2D" uid="uid://cgl2ntucxmqf" path="res://img/pngfind.com-geodude-png-6904248.png" id="1_pgqap"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm8ma"]
+atlas = ExtResource("1_pgqap")
+region = Rect2(360, 308, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e2qb"]
+atlas = ExtResource("1_pgqap")
+region = Rect2(420, 308, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm82v"]
+atlas = ExtResource("1_pgqap")
+region = Rect2(480, 308, 60, 77)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1d48m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm8ma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e2qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm82v")
+}],
+"loop": true,
+"name": &"geodude idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pj0h"]
+size = Vector2(29, 9)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(61, 6)
+script = ExtResource("1_lycrm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(115.5, 54.5)
+scale = Vector2(0.55, 0.48052)
+sprite_frames = SubResource("SpriteFrames_1d48m")
+animation = &"geodude idle"
+frame_progress = 0.370821
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(115.5, 55.5)
+shape = SubResource("RectangleShape2D_4pj0h")

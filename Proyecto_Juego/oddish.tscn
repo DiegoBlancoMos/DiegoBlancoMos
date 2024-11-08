@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=3 uid="uid://bqw3fwqnml22j"]
+
+[ext_resource type="Script" path="res://oddish.gd" id="1_al7na"]
+[ext_resource type="Texture2D" uid="uid://cgl2ntucxmqf" path="res://img/pngfind.com-geodude-png-6904248.png" id="1_o51b1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrqot"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(180, 77, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4flbw"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(240, 77, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08h41"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(300, 77, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1b8u"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(180, 77, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lphr"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(240, 77, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfvmp"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(300, 77, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb2d2"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(180, 154, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei2uw"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(240, 154, 60, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8j2p"]
+atlas = ExtResource("1_o51b1")
+region = Rect2(300, 154, 60, 77)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o50wl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrqot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4flbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08h41")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1b8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lphr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfvmp")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb2d2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei2uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8j2p")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wlh0y"]
+
+[node name="oddish" type="CharacterBody2D"]
+script = ExtResource("1_al7na")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(54, -25.75)
+scale = Vector2(0.533333, 0.577922)
+sprite_frames = SubResource("SpriteFrames_o50wl")
+animation = &"right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(55, -21)
+shape = SubResource("CircleShape2D_wlh0y")
