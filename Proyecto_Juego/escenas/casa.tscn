@@ -1,11 +1,12 @@
-[gd_scene load_steps=15 format=4 uid="uid://bqlbc28rfxsyn"]
+[gd_scene load_steps=17 format=4 uid="uid://bqlbc28rfxsyn"]
 
-[ext_resource type="Texture2D" uid="uid://c3ovmyr4nh0j8" path="res://img/MPWSP01/tileset/tileset.png" id="1_0hkqq"]
-[ext_resource type="PackedScene" uid="uid://crqqqekxigc43" path="res://personaje.tscn" id="2_0x4ib"]
-[ext_resource type="PackedScene" uid="uid://dyqljlo1ts2t8" path="res://npc_2.tscn" id="3_gkpgw"]
+[ext_resource type="Texture2D" uid="uid://c3ovmyr4nh0j8" path="res://img/MPWSP01/tileset/tileset.png" id="1_l8fmj"]
+[ext_resource type="PackedScene" uid="uid://crqqqekxigc43" path="res://escenas/personaje.tscn" id="2_vfskq"]
+[ext_resource type="PackedScene" uid="uid://dyqljlo1ts2t8" path="res://escenas/npc_2.tscn" id="3_h5j5p"]
+[ext_resource type="Script" path="res://scripts/portal_casa_volver.gd" id="4_tnymp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ouo42"]
-texture = ExtResource("1_0hkqq")
+texture = ExtResource("1_l8fmj")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1091,7 +1092,7 @@ texture = ExtResource("1_0hkqq")
 sources/0 = SubResource("TileSetAtlasSource_ouo42")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kn3bs"]
-texture = ExtResource("1_0hkqq")
+texture = ExtResource("1_l8fmj")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2197,6 +2198,9 @@ size = Vector2(50, 44)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trvn4"]
 size = Vector2(50, 48)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_372gc"]
+size = Vector2(85, 5)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="suelo" type="TileMapLayer" parent="."]
@@ -2207,7 +2211,7 @@ tile_set = SubResource("TileSet_rsmjr")
 tile_map_data = PackedByteArray("AAADAAMAAAAqAA0AAAADAAQAAAAqAA4AAAAEAAMAAAArAA0AAAAEAAQAAAArAA4AAAAbAAgAAAAqAA0AAAAbAAkAAAAqAA4AAAAcAAgAAAArAA0AAAAcAAkAAAArAA4AAAAEAAsAAAAqAA8AAAAEAAwAAAAqABAAAAAFAAsAAAArAA8AAAAFAAwAAAArABAAAAAcAAEAAAAqAA8AAAAcAAIAAAAqABAAAAAdAAEAAAArAA8AAAAdAAIAAAArABAAAAACAAMAAAAtAA0AAAACAAQAAAAtAA0AAAADAAsAAAAtAA0AAAADAAwAAAAtAA0AAAAbAAEAAAAtAA0AAAAbAAIAAAAtAA0AAAAaAAgAAAAtAA0AAAAaAAkAAAAtAA0AAAAdAAkAAAAtAA4AAAAdAAgAAAAtAA4AAAAeAAIAAAAtAA4AAAAeAAEAAAAtAA4AAAAFAAQAAAAtAA4AAAAFAAMAAAAtAA4AAAAGAAwAAAAtAA4AAAAGAAsAAAAtAA4AAAAIAPz/AAAuAA8AAAAIAP3/AAAuABAAAAAIAP//AAAuABAAAAAIAAAAAAAuABAAAAAIAP7/AAAuAA8AAAAIAAEAAAAuABEAAAAJAAEAAAAvABEAAAAKAAEAAAAvABEAAAALAAEAAAAvABEAAAAMAAEAAAAvABEAAAANAAEAAAAvABEAAAAOAAEAAAAvABEAAAAPAAEAAAAvABEAAAAQAAEAAAAvABEAAAARAAEAAAAvABEAAAASAAEAAAAvABEAAAATAAEAAAAvABEAAAAUAAEAAAAvABEAAAAVAAEAAAAvABEAAAAWAAEAAAAwABEAAAAWAAAAAAAwABAAAAAWAP//AAAwAA8AAAAWAP3/AAAwABAAAAAWAP7/AAAwABAAAAAWAPz/AAAwAA8AAAALAP7/AAAyABAAAAATAP7/AAAyAA8AAAAMAP7/AAAyABEAAAANAP7/AAAyABEAAAAOAP7/AAAyABEAAAAPAP7/AAAyABEAAAAQAP7/AAAyABEAAAARAP7/AAAyABEAAAASAP7/AAAyABEAAAALAP3/AAAxABAAAAALAPz/AAAxABAAAAATAPz/AAAzAA8AAAATAP3/AAAzABAAAAAOAA8AAAAsAA0AAAAOABAAAAAsAA4AAAAUAA8AAAAsAA0AAAAUABAAAAAsAA4AAAA=")
 tile_set = SubResource("TileSet_s3bg3")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_0x4ib")]
+[node name="Personaje" parent="." instance=ExtResource("2_vfskq")]
 position = Vector2(282, 246)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -2240,5 +2244,14 @@ shape = SubResource("RectangleShape2D_bw3ga")
 position = Vector2(343, -40)
 shape = SubResource("RectangleShape2D_trvn4")
 
-[node name="npc2" parent="." instance=ExtResource("3_gkpgw")]
+[node name="npc2" parent="." instance=ExtResource("3_h5j5p")]
 position = Vector2(251, -53)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_tnymp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(283.5, 269.5)
+shape = SubResource("RectangleShape2D_372gc")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

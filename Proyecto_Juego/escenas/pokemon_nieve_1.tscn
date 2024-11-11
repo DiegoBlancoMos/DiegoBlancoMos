@@ -1,7 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0wjfatc5xer6"]
+[gd_scene load_steps=14 format=3 uid="uid://b0wjfatc5xer6"]
 
 [ext_resource type="Texture2D" uid="uid://2grybhg5lti4" path="res://img/MPWSP01/sprites/sprite6_idle.png" id="1_apcay"]
 [ext_resource type="Script" path="res://scripts/pokemon_nieve_1.gd" id="1_s0fe7"]
+[ext_resource type="Texture2D" uid="uid://bjr2foarp6e1h" path="res://img/MPWSP01/sprites/sprite6_attack.png" id="2_vmysy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yagk5"]
+atlas = ExtResource("2_vmysy")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65r06"]
+atlas = ExtResource("2_vmysy")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epsjm"]
+atlas = ExtResource("2_vmysy")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m47b"]
+atlas = ExtResource("2_vmysy")
+region = Rect2(288, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ipcj"]
 atlas = ExtResource("1_apcay")
@@ -21,6 +38,23 @@ region = Rect2(288, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_slspb"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yagk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65r06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epsjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m47b")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ipcj")
@@ -46,12 +80,12 @@ radius = 11.0454
 script = ExtResource("1_s0fe7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(4.5, 1)
-scale = Vector2(0.572917, 0.625)
+position = Vector2(20, 15)
+scale = Vector2(1.91667, 1.58333)
 sprite_frames = SubResource("SpriteFrames_slspb")
-animation = &"idle"
-frame_progress = 0.348505
+animation = &"attack"
+frame_progress = 0.621038
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 5)
+position = Vector2(51, 44)
 shape = SubResource("CircleShape2D_y617u")

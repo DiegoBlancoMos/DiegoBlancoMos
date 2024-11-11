@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcdk6p6c7mlgv"]
+
+[ext_resource type="Texture2D" uid="uid://2grybhg5lti4" path="res://img/MPWSP01/sprites/sprite6_idle.png" id="1_8peh5"]
+[ext_resource type="Script" path="res://scripts/pokemon_nieve_pequeño.gd" id="1_k0aj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbvab"]
+atlas = ExtResource("1_8peh5")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65lib"]
+atlas = ExtResource("1_8peh5")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26xst"]
+atlas = ExtResource("1_8peh5")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4chih"]
+atlas = ExtResource("1_8peh5")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gefk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbvab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65lib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26xst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4chih")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pjyx4"]
+radius = 10.198
+
+[node name="pokemon_nieve_pequeño" type="CharacterBody2D"]
+script = ExtResource("1_k0aj3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(95, 0)
+scale = Vector2(0.604167, 0.625)
+sprite_frames = SubResource("SpriteFrames_gefk0")
+animation = &"idle"
+frame_progress = 0.381005
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(99, 6)
+shape = SubResource("CircleShape2D_pjyx4")
