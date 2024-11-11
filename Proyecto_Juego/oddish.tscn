@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bqw3fwqnml22j"]
 
-[ext_resource type="Script" path="res://oddish.gd" id="1_al7na"]
+[ext_resource type="Script" path="res://scripts/oddish.gd" id="1_al7na"]
 [ext_resource type="Texture2D" uid="uid://cgl2ntucxmqf" path="res://img/pngfind.com-geodude-png-6904248.png" id="1_o51b1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vrqot"]

@@ -14,3 +14,9 @@ config/name="Proyecto de Juego"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_height=649
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
