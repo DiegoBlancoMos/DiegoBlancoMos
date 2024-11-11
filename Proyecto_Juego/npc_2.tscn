@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyqljlo1ts2t8"]
+
+[ext_resource type="Texture2D" uid="uid://bi7dxr8ke84gt" path="res://img/MPWSP01/character overworld/ow1.png" id="1_cx1vd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_072os"]
+atlas = ExtResource("1_cx1vd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vdaur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_072os")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tt7af"]
+radius = 8.0
+
+[node name="npc2" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vdaur")
+frame_progress = 0.210786
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tt7af")
