@@ -1,0 +1,149 @@
+[gd_scene load_steps=22 format=3 uid="uid://btnkiihvqkgdu"]
+
+[ext_resource type="Texture2D" uid="uid://bbj36nqrc11ty" path="res://img/MPWSP01/attack effects/attack2.png" id="1_a3a5w"]
+[ext_resource type="Texture2D" uid="uid://ci61lyhylrj4t" path="res://img/MPWSP01/attack effects/attack1.png" id="1_x31cl"]
+[ext_resource type="Texture2D" uid="uid://b4hdeg45kha3q" path="res://img/MPWSP01/attack effects/attack3.png" id="2_cv83d"]
+[ext_resource type="Texture2D" uid="uid://dy830wegh1gow" path="res://img/MPWSP01/attack effects/attack5.png" id="3_n154g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n04le"]
+atlas = ExtResource("1_x31cl")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2iae0"]
+atlas = ExtResource("1_x31cl")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s37x8"]
+atlas = ExtResource("1_x31cl")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yvky"]
+atlas = ExtResource("1_x31cl")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6evv"]
+atlas = ExtResource("1_a3a5w")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcrul"]
+atlas = ExtResource("1_a3a5w")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qygms"]
+atlas = ExtResource("1_a3a5w")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvakq"]
+atlas = ExtResource("1_a3a5w")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7pay"]
+atlas = ExtResource("2_cv83d")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqpg2"]
+atlas = ExtResource("2_cv83d")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kau1"]
+atlas = ExtResource("2_cv83d")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4n8o"]
+atlas = ExtResource("2_cv83d")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fumhu"]
+atlas = ExtResource("3_n154g")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_117ag"]
+atlas = ExtResource("3_n154g")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k6us"]
+atlas = ExtResource("3_n154g")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ayw1"]
+atlas = ExtResource("3_n154g")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alq8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n04le")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2iae0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s37x8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yvky")
+}],
+"loop": true,
+"name": &"ataque nive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6evv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcrul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qygms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvakq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7pay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqpg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kau1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4n8o")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fumhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_117ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2k6us")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ayw1")
+}],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 2.07591
+sprite_frames = SubResource("SpriteFrames_alq8s")
+animation = &"ataque nive"
+frame_progress = 0.525051

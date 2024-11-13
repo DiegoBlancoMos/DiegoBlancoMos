@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://lrao3adyo3qu"]
+
+[ext_resource type="Script" path="res://scripts/pokemon_planta.gd" id="1_lqsk4"]
+[ext_resource type="Texture2D" uid="uid://d0pdc71jrc2la" path="res://img/MPWSP01/sprites/sprite1_idle.png" id="1_ysaid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4dqv"]
+atlas = ExtResource("1_ysaid")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_545lw"]
+atlas = ExtResource("1_ysaid")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f0gj"]
+atlas = ExtResource("1_ysaid")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgb4r"]
+atlas = ExtResource("1_ysaid")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ctup4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4dqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_545lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f0gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgb4r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0t5vt"]
+
+[node name="Pokemon_planta" type="CharacterBody2D"]
+script = ExtResource("1_lqsk4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(347, 303)
+scale = Vector2(1.90625, 1.71875)
+sprite_frames = SubResource("SpriteFrames_ctup4")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(340, 317)
+shape = SubResource("CircleShape2D_0t5vt")

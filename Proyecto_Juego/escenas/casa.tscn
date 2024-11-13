@@ -1,9 +1,17 @@
-[gd_scene load_steps=17 format=4 uid="uid://bqlbc28rfxsyn"]
+[gd_scene load_steps=34 format=4 uid="uid://bqlbc28rfxsyn"]
 
 [ext_resource type="Texture2D" uid="uid://c3ovmyr4nh0j8" path="res://img/MPWSP01/tileset/tileset.png" id="1_l8fmj"]
+[ext_resource type="Texture2D" uid="uid://ddmj2sphvqbyy" path="res://img/Custom Edited - Pokemon Generation 1 Customs - 004 Charmander.png" id="2_iyonr"]
 [ext_resource type="PackedScene" uid="uid://crqqqekxigc43" path="res://escenas/personaje.tscn" id="2_vfskq"]
 [ext_resource type="PackedScene" uid="uid://dyqljlo1ts2t8" path="res://escenas/npc_2.tscn" id="3_h5j5p"]
 [ext_resource type="Script" path="res://scripts/portal_casa_volver.gd" id="4_tnymp"]
+[ext_resource type="Texture2D" uid="uid://bgkmrtk82nhxs" path="res://img/MPWSP01/sprites/sprite4_attack.png" id="6_mkbk6"]
+[ext_resource type="Script" path="res://escenas/elegir_pokemon.gd" id="6_xyde5"]
+[ext_resource type="Texture2D" uid="uid://dw8oj4xe7yug1" path="res://img/MPWSP01/menu sprites/menusprite1.png" id="7_0y5tw"]
+[ext_resource type="Texture2D" uid="uid://ctiuauq8e8rfp" path="res://img/MPWSP01/menu sprites/menusprite6.png" id="8_3nq7g"]
+[ext_resource type="Texture2D" uid="uid://cva3h0rgwoamh" path="res://img/MPWSP01/menu sprites/menusprite12.png" id="9_56avg"]
+[ext_resource type="Texture2D" uid="uid://bhqr4uhcjcfdb" path="res://img/MPWSP01/menu sprites/menusprite7.png" id="10_uwn1m"]
+[ext_resource type="Texture2D" uid="uid://desptht4vljqk" path="res://img/poke ball.png" id="11_xsog8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ouo42"]
 texture = ExtResource("1_l8fmj")
@@ -2174,8 +2182,12 @@ texture = ExtResource("1_l8fmj")
 16:24/0 = 0
 17:24/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lb0tg"]
+texture = ExtResource("2_iyonr")
+
 [sub_resource type="TileSet" id="TileSet_s3bg3"]
 sources/0 = SubResource("TileSetAtlasSource_kn3bs")
+sources/1 = SubResource("TileSetAtlasSource_lb0tg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3igr"]
 size = Vector2(5, 370)
@@ -2201,6 +2213,118 @@ size = Vector2(50, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_372gc"]
 size = Vector2(85, 5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7t31"]
+size = Vector2(57, 5.5)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kn4o0"]
+texture = ExtResource("6_mkbk6")
+2:1/0 = 0
+3:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+22:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+5:0/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_412mu"]
+texture = ExtResource("7_0y5tw")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ng8i7"]
+texture = ExtResource("8_3nq7g")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohctg"]
+texture = ExtResource("9_56avg")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsm4n"]
+texture = ExtResource("10_uwn1m")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nuet"]
+texture = ExtResource("11_xsog8")
+texture_region_size = Vector2i(160, 160)
+3:2/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_v684l"]
+sources/0 = SubResource("TileSetAtlasSource_kn4o0")
+sources/1 = SubResource("TileSetAtlasSource_412mu")
+sources/2 = SubResource("TileSetAtlasSource_ng8i7")
+sources/3 = SubResource("TileSetAtlasSource_ohctg")
+sources/4 = SubResource("TileSetAtlasSource_qsm4n")
+sources/5 = SubResource("TileSetAtlasSource_8nuet")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="suelo" type="TileMapLayer" parent="."]
@@ -2208,7 +2332,7 @@ tile_map_data = PackedByteArray("AAAAAPz/AAAqABEAAAAAAP3/AAAqABIAAAAAAP7/AAAqABI
 tile_set = SubResource("TileSet_rsmjr")
 
 [node name="mueble" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAADAAMAAAAqAA0AAAADAAQAAAAqAA4AAAAEAAMAAAArAA0AAAAEAAQAAAArAA4AAAAbAAgAAAAqAA0AAAAbAAkAAAAqAA4AAAAcAAgAAAArAA0AAAAcAAkAAAArAA4AAAAEAAsAAAAqAA8AAAAEAAwAAAAqABAAAAAFAAsAAAArAA8AAAAFAAwAAAArABAAAAAcAAEAAAAqAA8AAAAcAAIAAAAqABAAAAAdAAEAAAArAA8AAAAdAAIAAAArABAAAAACAAMAAAAtAA0AAAACAAQAAAAtAA0AAAADAAsAAAAtAA0AAAADAAwAAAAtAA0AAAAbAAEAAAAtAA0AAAAbAAIAAAAtAA0AAAAaAAgAAAAtAA0AAAAaAAkAAAAtAA0AAAAdAAkAAAAtAA4AAAAdAAgAAAAtAA4AAAAeAAIAAAAtAA4AAAAeAAEAAAAtAA4AAAAFAAQAAAAtAA4AAAAFAAMAAAAtAA4AAAAGAAwAAAAtAA4AAAAGAAsAAAAtAA4AAAAIAPz/AAAuAA8AAAAIAP3/AAAuABAAAAAIAP//AAAuABAAAAAIAAAAAAAuABAAAAAIAP7/AAAuAA8AAAAIAAEAAAAuABEAAAAJAAEAAAAvABEAAAAKAAEAAAAvABEAAAALAAEAAAAvABEAAAAMAAEAAAAvABEAAAANAAEAAAAvABEAAAAOAAEAAAAvABEAAAAPAAEAAAAvABEAAAAQAAEAAAAvABEAAAARAAEAAAAvABEAAAASAAEAAAAvABEAAAATAAEAAAAvABEAAAAUAAEAAAAvABEAAAAVAAEAAAAvABEAAAAWAAEAAAAwABEAAAAWAAAAAAAwABAAAAAWAP//AAAwAA8AAAAWAP3/AAAwABAAAAAWAP7/AAAwABAAAAAWAPz/AAAwAA8AAAALAP7/AAAyABAAAAATAP7/AAAyAA8AAAAMAP7/AAAyABEAAAANAP7/AAAyABEAAAAOAP7/AAAyABEAAAAPAP7/AAAyABEAAAAQAP7/AAAyABEAAAARAP7/AAAyABEAAAASAP7/AAAyABEAAAALAP3/AAAxABAAAAALAPz/AAAxABAAAAATAPz/AAAzAA8AAAATAP3/AAAzABAAAAAOAA8AAAAsAA0AAAAOABAAAAAsAA4AAAAUAA8AAAAsAA0AAAAUABAAAAAsAA4AAAA=")
+tile_map_data = PackedByteArray("AAADAAMAAAAqAA0AAAADAAQAAAAqAA4AAAAEAAMAAAArAA0AAAAEAAQAAAArAA4AAAAbAAgAAAAqAA0AAAAbAAkAAAAqAA4AAAAcAAgAAAArAA0AAAAcAAkAAAArAA4AAAAEAAsAAAAqAA8AAAAEAAwAAAAqABAAAAAFAAsAAAArAA8AAAAFAAwAAAArABAAAAAcAAEAAAAqAA8AAAAcAAIAAAAqABAAAAAdAAEAAAArAA8AAAAdAAIAAAArABAAAAACAAMAAAAtAA0AAAACAAQAAAAtAA0AAAADAAsAAAAtAA0AAAADAAwAAAAtAA0AAAAbAAEAAAAtAA0AAAAbAAIAAAAtAA0AAAAaAAgAAAAtAA0AAAAaAAkAAAAtAA0AAAAdAAkAAAAtAA4AAAAdAAgAAAAtAA4AAAAeAAIAAAAtAA4AAAAeAAEAAAAtAA4AAAAFAAQAAAAtAA4AAAAFAAMAAAAtAA4AAAAGAAwAAAAtAA4AAAAGAAsAAAAtAA4AAAAIAPz/AAAuAA8AAAAIAP3/AAAuABAAAAAIAP//AAAuABAAAAAIAAAAAAAuABAAAAAIAP7/AAAuAA8AAAAIAAEAAAAuABEAAAAJAAEAAAAvABEAAAAKAAEAAAAvABEAAAALAAEAAAAvABEAAAAMAAEAAAAvABEAAAANAAEAAAAvABEAAAAOAAEAAAAvABEAAAAPAAEAAAAvABEAAAAQAAEAAAAvABEAAAARAAEAAAAvABEAAAASAAEAAAAvABEAAAATAAEAAAAvABEAAAAUAAEAAAAvABEAAAAVAAEAAAAvABEAAAAWAAEAAAAwABEAAAAWAAAAAAAwABAAAAAWAP//AAAwAA8AAAAWAP3/AAAwABAAAAAWAP7/AAAwABAAAAAWAPz/AAAwAA8AAAALAP7/AAAyABAAAAATAP7/AAAyABEAAAAMAP7/AAAyABEAAAANAP7/AAAyABEAAAAOAP7/AAAyABEAAAAPAP7/AAAyABEAAAAQAP7/AAAyABEAAAARAP7/AAAyABEAAAASAP7/AAAyABEAAAALAP3/AAAxABAAAAALAPz/AAAxABAAAAAOAA8AAAAsAA0AAAAOABAAAAAsAA4AAAAUAA8AAAAsAA0AAAAUABAAAAAsAA4AAAAUAPz/AAAzAA8AAAAUAP3/AAAzABAAAAAUAP7/AAAyAA8AAAA=")
 tile_set = SubResource("TileSet_s3bg3")
 
 [node name="Personaje" parent="." instance=ExtResource("2_vfskq")]
@@ -2254,4 +2378,16 @@ script = ExtResource("4_tnymp")
 position = Vector2(283.5, 269.5)
 shape = SubResource("RectangleShape2D_372gc")
 
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource("6_xyde5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(247, 33.25)
+shape = SubResource("RectangleShape2D_w7t31")
+
+[node name="Pokemons" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAPAPr/AwAAAAAAAAAPAPv/AwAAAAEAAAAQAPr/AwABAAAAAAAQAPv/AwABAAEAAAAMAPr/AQAAAAAAAAAMAPv/AQAAAAEAAAANAPr/AQABAAAAAAANAPv/AQABAAEAAAASAPr/BAAAAAAAAAASAPv/BAAAAAEAAAATAPr/BAABAAAAAAATAPv/BAABAAEAAAA=")
+tile_set = SubResource("TileSet_v684l")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
