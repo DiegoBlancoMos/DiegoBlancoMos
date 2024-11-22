@@ -1,27 +1,54 @@
 [gd_scene load_steps=6 format=3 uid="uid://dow4pqi5g6wv0"]
 
-[ext_resource type="Script" path="res://scripts/Move.gd" id="1_4p011"]
+[ext_resource type="Script" path="res://Scripts/batalla_1.gd" id="1_8mum6"]
 [ext_resource type="Texture2D" uid="uid://c21h28ow0fkhk" path="res://img/MPWSP01/backgrounds/background3.png" id="1_g7rg7"]
 [ext_resource type="PackedScene" uid="uid://b0wjfatc5xer6" path="res://escenas/pokemon_nieve_1.tscn" id="2_4cvuy"]
 [ext_resource type="PackedScene" uid="uid://c4nyfy1nx343" path="res://escenas/pokemon_planta1.tscn" id="4_3hxmi"]
 [ext_resource type="PackedScene" uid="uid://btnkiihvqkgdu" path="res://escenas/ataques.tscn" id="5_cix8i"]
 
-[node name="batalla" type="Node2D"]
-script = ExtResource("1_4p011")
+[node name="batalla1" type="Node2D"]
+script = ExtResource("1_8mum6")
 
 [node name="Background3" type="Sprite2D" parent="."]
-position = Vector2(577.75, 323.75)
-scale = Vector2(1.79766, 1.79861)
+position = Vector2(661.749, 352.5)
+scale = Vector2(2.06016, 1.95833)
 texture = ExtResource("1_g7rg7")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4cvuy")]
-position = Vector2(833, 241)
+position = Vector2(866, 247)
 scale = Vector2(1.62969, 1.6)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("4_3hxmi")]
-position = Vector2(218, 497)
+position = Vector2(387, 496)
 
 [node name="ataques" parent="." instance=ExtResource("5_cix8i")]
 visible = false
 position = Vector2(366, 574)
 rotation = 0.026108
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 713.0
+offset_top = 583.0
+offset_right = 872.0
+offset_bottom = 641.0
+
+[node name="PlayerHP" type="Label" parent="VBoxContainer"]
+modulate = Color(0.0100786, 0.00750133, 0.0279265, 1)
+layout_mode = 2
+text = "Hp 100/100"
+horizontal_alignment = 1
+
+[node name="boton_atacar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "ATACAR"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 959.0
+offset_top = 348.0
+offset_right = 1129.0
+offset_bottom = 388.0
+
+[node name="OpponentHP" type="Label" parent="VBoxContainer2"]
+modulate = Color(0.0235294, 0.0117647, 0.0156863, 1)
+layout_mode = 2
+text = "HP 101/101"

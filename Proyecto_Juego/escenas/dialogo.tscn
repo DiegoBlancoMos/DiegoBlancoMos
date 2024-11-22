@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7jo0j8uwbgmf"]
+
+[ext_resource type="Texture2D" uid="uid://07mjxkohjmi1" path="res://img/dialouge_background.png" id="1_buyx0"]
+[ext_resource type="FontFile" uid="uid://b7roxhg1ff2i5" path="res://img/background menu/font/pokefont_big.ttf" id="2_bhf6h"]
+
+[node name="dialogo" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(139.5, 22.5)
+scale = Vector2(1.42083, 1.64583)
+texture = ExtResource("1_buyx0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 279.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bhf6h")
+text = "abc
+"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05

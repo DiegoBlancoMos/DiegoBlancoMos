@@ -1,7 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://crqqqekxigc43"]
+[gd_scene load_steps=27 format=3 uid="uid://crqqqekxigc43"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_hxdyc"]
 [ext_resource type="Texture2D" uid="uid://sx1jdx2ptj3j" path="res://img/MainGuySpriteSheet.png" id="1_qngw7"]
+[ext_resource type="PackedScene" uid="uid://dj5mcdbe2gg4r" path="res://escenas/ataque.tscn" id="2_kpc11"]
+[ext_resource type="Texture2D" uid="uid://vvssy5solpl8" path="res://img/pngegg.png" id="3_cewux"]
+[ext_resource type="Script" path="res://escenas/area_2d.gd" id="4_pb1si"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ayao6"]
 atlas = ExtResource("1_qngw7")
@@ -122,12 +125,59 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mynkm"]
-radius = 8.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ry2t"]
+radius = 7.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ys6db"]
+radius = 7.0
 height = 22.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqwqe"]
+atlas = ExtResource("3_cewux")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8ibx"]
+atlas = ExtResource("3_cewux")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x00ba"]
+atlas = ExtResource("3_cewux")
+region = Rect2(600, 0, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eucxm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqwqe")
+}],
+"loop": true,
+"name": &"lleno",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8ibx")
+}],
+"loop": true,
+"name": &"medio",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x00ba")
+}],
+"loop": true,
+"name": &"vacio",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q0pet"]
+radius = 4.12311
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["personaje"]]
 script = ExtResource("1_hxdyc")
+attack_scene = ExtResource("2_kpc11")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -136,9 +186,55 @@ zoom = Vector2(1.5, 1.5)
 position = Vector2(3.75, -6)
 scale = Vector2(0.573171, 0.666667)
 sprite_frames = SubResource("SpriteFrames_me2hk")
-animation = &"up"
-frame_progress = 0.946766
+animation = &"down"
+frame_progress = 0.365589
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -6)
-shape = SubResource("CapsuleShape2D_mynkm")
+position = Vector2(2, -5)
+shape = SubResource("CapsuleShape2D_3ry2t")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_pb1si")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, -5)
+shape = SubResource("CapsuleShape2D_ys6db")
+
+[node name="Corazon1" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Corazon1"]
+position = Vector2(-27, 207)
+scale = Vector2(0.0433333, 0.0483334)
+sprite_frames = SubResource("SpriteFrames_eucxm")
+animation = &"lleno"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corazon1"]
+position = Vector2(306, -557)
+shape = SubResource("CircleShape2D_q0pet")
+
+[node name="Corazon2" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Corazon2"]
+position = Vector2(-7, 207)
+scale = Vector2(0.0433333, 0.0483334)
+sprite_frames = SubResource("SpriteFrames_eucxm")
+animation = &"lleno"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corazon2"]
+position = Vector2(306, -557)
+shape = SubResource("CircleShape2D_q0pet")
+
+[node name="Corazon3" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Corazon3"]
+position = Vector2(13, 207)
+scale = Vector2(0.0433333, 0.0483334)
+sprite_frames = SubResource("SpriteFrames_eucxm")
+animation = &"medio"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corazon3"]
+position = Vector2(306, -557)
+shape = SubResource("CircleShape2D_q0pet")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

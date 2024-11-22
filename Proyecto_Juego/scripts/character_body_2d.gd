@@ -2,6 +2,13 @@ extends CharacterBody2D
 
 # Velocidad de movimiento del personaje
 @export var speed := 200
+@onready var anim_player1 = $Corazon1/AnimatedSprite2D
+@onready var anim_player2 = $Corazon2/AnimatedSprite2D
+@onready var anim_player3 = $Corazon3/AnimatedSprite2D
+var salud = 6
+var attack_direction = Vector2.DOWN  
+@export var attack_scene : PackedScene
+
 
 func _process(delta):
 	var movement := Vector2.ZERO  # Vector para almacenar la dirección de movimiento
@@ -10,15 +17,23 @@ func _process(delta):
 	if Input.is_action_pressed("ui_right"):
 		movement.x += 1
 		$AnimatedSprite2D.play("right")
+		attack_direction = Vector2.RIGHT  # Dirección hacia la derecha
+
 	elif Input.is_action_pressed("ui_left"):
 		movement.x -= 1
 		$AnimatedSprite2D.play("left")
+		attack_direction = Vector2.LEFT  # Dirección hacia la IZQ
+
 	elif Input.is_action_pressed("ui_down"):
 		movement.y += 1
 		$AnimatedSprite2D.play("down")
+		attack_direction = Vector2.DOWN  # Dirección hacia abajo
+
 	elif Input.is_action_pressed("ui_up"):
 		movement.y -= 1
 		$AnimatedSprite2D.play("up")
+		attack_direction = Vector2.UP  # Dirección hacia arriba
+
 	else:
 		$AnimatedSprite2D.play("idle")
 		velocity.x = 0
@@ -29,7 +44,90 @@ func _process(delta):
 	# Mueve al personaje
 	velocity = movement
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		lanzar_ataque()  # Lanza el proyectil cuando se presiona la tecla
 
+func _ready() -> void:
+	# Verificar si los nodos AnimatedSprite están correctamente asignados
+	if anim_player1 and anim_player2 and anim_player3:
+		# Imprimir las referencias para verificar
+		print("Animaciones referenciadas correctamente:")
+		print(anim_player1)
+		print(anim_player2)
+		print(anim_player3)
+		
+		# Reproducir la animación "lleno" en los tres AnimatedSprites
+		anim_player1.play("lleno")
+		anim_player2.play("lleno")
+		anim_player3.play("lleno")
+	else:
+		print("Uno o más nodos AnimatedSprite no están correctamente asignados.")
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+func _on_attack_input():
+	if Input.is_action_just_pressed("ui_accept"):  # Suponiendo que "ui_accept" está mapeado a la tecla "Z"
+		lanzar_ataque()
+
+func lanzar_ataque():
+	var proyectil = attack_scene.instantiate()  # Instancia el proyectil
+	proyectil.position = position  # Coloca el proyectil en la posición del personaje
+	proyectil.direction = attack_direction  # Asigna la dirección del proyectil
+	get_tree().current_scene.add_child(proyectil)  # Agrega el proyectil a la escena
+	
+func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if body.is_in_group("abeja"):
+		print("Abeja hizo daño")
+		salud -= 1
+		if salud == 5:
+			anim_player1.play("lleno")
+			anim_player2.play("lleno")
+			anim_player3.play("medio")
+		if salud == 4:
+			anim_player1.play("lleno")
+			anim_player2.play("lleno")
+			anim_player3.play("vacio")
+		if salud == 3:
+			anim_player1.play("lleno")
+			anim_player2.play("medio")
+			anim_player3.play("vacio")
+		if salud == 2:
+			anim_player1.play("lleno")
+			anim_player2.play("vacio")
+			anim_player3.play("vacio")	
+		if salud == 1:
+			anim_player1.play("medio")
+			anim_player2.play("vacio")
+			anim_player3.play("vacio")
+		if salud == 0:
+			anim_player1.play("vacio")
+			anim_player2.play("vacio")
+			anim_player3.play("vacio")
+			print ("Personaje murió")
+			get_tree().change_scene_to_file("res://escenas/muerte.tscn")
+
+			
+	if body.is_in_group("globo_salud"):		
+		print("Globo curación")
+		salud += 1
+		if salud == 6:
+			anim_player1.play("lleno")
+			anim_player2.play("lleno")
+			anim_player3.play("lleno")
+		if salud == 5:
+			anim_player1.play("lleno")
+			anim_player2.play("lleno")
+			anim_player3.play("medio")
+		if salud == 4:
+			anim_player1.play("lleno")
+			anim_player2.play("lleno")
+			anim_player3.play("vacio")
+		if salud == 3:
+			anim_player1.play("lleno")
+			anim_player2.play("medio")
+			anim_player3.play("vacio")
+		if salud == 2:
+			anim_player1.play("lleno")
+			anim_player2.play("vacio")
+			anim_player3.play("vacio")	
+		
+	

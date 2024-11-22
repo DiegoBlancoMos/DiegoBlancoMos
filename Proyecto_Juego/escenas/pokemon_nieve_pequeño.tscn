@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pjyx4"]
-radius = 10.198
+radius = 5.38516
 
 [node name="pokemon_nieve_pequeño" type="CharacterBody2D"]
 script = ExtResource("1_k0aj3")
@@ -53,5 +53,5 @@ animation = &"idle"
 frame_progress = 0.381005
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(99, 6)
+position = Vector2(99, 5)
 shape = SubResource("CircleShape2D_pjyx4")

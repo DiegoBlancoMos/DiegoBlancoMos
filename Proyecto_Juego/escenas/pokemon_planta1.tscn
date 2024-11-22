@@ -1,10 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4nyfy1nx343"]
+[gd_scene load_steps=10 format=3 uid="uid://c4nyfy1nx343"]
 
 [ext_resource type="Texture2D" uid="uid://bjyijwl1f02i7" path="res://img/MPWSP01/sprites/sprite1.png" id="1_yf3rl"]
+[ext_resource type="Texture2D" uid="uid://cewoi7dbi60l0" path="res://img/MPWSP01/sprites/sprite1_attack.png" id="2_6j6vk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhq6g"]
 atlas = ExtResource("1_yf3rl")
 region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bodly"]
+atlas = ExtResource("2_6j6vk")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jd6w"]
+atlas = ExtResource("2_6j6vk")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvdcs"]
+atlas = ExtResource("2_6j6vk")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t1tc"]
+atlas = ExtResource("2_6j6vk")
+region = Rect2(0, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_opamy"]
 animations = [{
@@ -15,10 +32,27 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bodly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jd6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvdcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t1tc")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_20nhx"]
-radius = 42.9535
+radius = 25.0799
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
@@ -26,7 +60,9 @@ radius = 42.9535
 position = Vector2(59, 52.5)
 scale = Vector2(2.22917, 2.09375)
 sprite_frames = SubResource("SpriteFrames_opamy")
+animation = &"new_animation"
+frame_progress = 0.673762
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(70, 119)
+position = Vector2(49, 65)
 shape = SubResource("CircleShape2D_20nhx")

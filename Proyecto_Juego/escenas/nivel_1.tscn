@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://bogbec1gckh25"]
+[gd_scene load_steps=10 format=4 uid="uid://bogbec1gckh25"]
 
 [ext_resource type="Texture2D" uid="uid://c3ovmyr4nh0j8" path="res://img/MPWSP01/tileset/tileset.png" id="1_jwhat"]
 [ext_resource type="PackedScene" uid="uid://crqqqekxigc43" path="res://escenas/personaje.tscn" id="3_mun5q"]
 [ext_resource type="PackedScene" uid="uid://dcdk6p6c7mlgv" path="res://escenas/pokemon_nieve_pequeño.tscn" id="3_rbyl6"]
 [ext_resource type="Script" path="res://scripts/portal_nivel1_volver.gd" id="4_vwejb"]
+[ext_resource type="Script" path="res://scripts/portal_batalla_1.gd" id="5_8rmxh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6dds"]
 texture = ExtResource("1_jwhat")
@@ -1094,6 +1095,8 @@ sources/0 = SubResource("TileSetAtlasSource_g6dds")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8lg3d"]
 size = Vector2(17, 76.5)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_msbsv"]
+
 [node name="nivel1" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -1106,11 +1109,19 @@ position = Vector2(-123, 76)
 [node name="pokemon_nieve_pequeño" parent="." instance=ExtResource("3_rbyl6")]
 position = Vector2(135, -42)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="volver" type="Area2D" parent="."]
 script = ExtResource("4_vwejb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="volver"]
 position = Vector2(-150, 65.75)
 shape = SubResource("RectangleShape2D_8lg3d")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[node name="batalla1" type="Area2D" parent="."]
+script = ExtResource("5_8rmxh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="batalla1"]
+position = Vector2(234, -34)
+shape = SubResource("CircleShape2D_msbsv")
+
+[connection signal="body_entered" from="volver" to="volver" method="_on_body_entered"]
+[connection signal="body_entered" from="batalla1" to="batalla1" method="_on_body_entered"]

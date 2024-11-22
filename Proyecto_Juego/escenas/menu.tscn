@@ -1,28 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://dk5c1n325y5uw"]
+[gd_scene load_steps=6 format=3 uid="uid://dk5c1n325y5uw"]
 
-[ext_resource type="Texture2D" uid="uid://cdgd0r75q67r8" path="res://img/MPWSP01/backgrounds/background1.png" id="1_e145a"]
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_vdhc5"]
+[ext_resource type="FontFile" uid="uid://dpato32pu35tk" path="res://img/obedient-boy/ObedientBoyDemoRegular.ttf" id="2_p3vcl"]
+[ext_resource type="Texture2D" uid="uid://d3n07dhkfohvx" path="res://img/rayquaza.png" id="3_0k3mk"]
+[ext_resource type="Texture2D" uid="uid://c048w2htoxbh8" path="res://img/moltres.png" id="4_aaqrp"]
+[ext_resource type="Texture2D" uid="uid://dfresscs0jveo" path="res://img/International_Pokémon_logo.svg.png" id="5_aomfr"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_vdhc5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-383, 257.5)
-scale = Vector2(2.19687, 2.43056)
-texture = ExtResource("1_e145a")
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -835.0
+offset_top = -179.0
+offset_right = 317.0
+offset_bottom = 481.0
+color = Color(0.23108, 0.739956, 0.24122, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = -493.0
+offset_left = -537.0
 offset_top = 189.0
-offset_right = 1.0
+offset_right = -6.0
 offset_bottom = 280.0
+scale = Vector2(1.2, 1.84347)
 
 [node name="Button_play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_p3vcl")
+theme_override_font_sizes/font_size = 20
 text = "PLAY"
 
 [node name="Button_quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_p3vcl")
+theme_override_font_sizes/font_size = 20
 text = "QUIT"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -31,6 +41,20 @@ limit_left = -322
 limit_top = -181
 limit_right = 319
 limit_bottom = 181
+
+[node name="InternationalPokémonLogo_svg" type="Sprite2D" parent="."]
+position = Vector2(-234, 64)
+scale = Vector2(0.669922, 0.601064)
+texture = ExtResource("5_aomfr")
+
+[node name="Rayquaza" type="Sprite2D" parent="."]
+position = Vector2(276, 302)
+scale = Vector2(1.13789, 1.17158)
+texture = ExtResource("3_0k3mk")
+
+[node name="Moltres" type="Sprite2D" parent="."]
+position = Vector2(-653, 279)
+texture = ExtResource("4_aaqrp")
 
 [connection signal="pressed" from="VBoxContainer/Button_play" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_quit" to="." method="_on_button_quit_pressed"]

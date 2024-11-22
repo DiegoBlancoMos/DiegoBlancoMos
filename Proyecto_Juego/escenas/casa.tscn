@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://crqqqekxigc43" path="res://escenas/personaje.tscn" id="2_vfskq"]
 [ext_resource type="PackedScene" uid="uid://dyqljlo1ts2t8" path="res://escenas/npc_2.tscn" id="3_h5j5p"]
 [ext_resource type="Script" path="res://scripts/portal_casa_volver.gd" id="4_tnymp"]
+[ext_resource type="Script" path="res://scripts/elegir_pokemon.gd" id="6_lrkmu"]
 [ext_resource type="Texture2D" uid="uid://bgkmrtk82nhxs" path="res://img/MPWSP01/sprites/sprite4_attack.png" id="6_mkbk6"]
-[ext_resource type="Script" path="res://escenas/elegir_pokemon.gd" id="6_xyde5"]
 [ext_resource type="Texture2D" uid="uid://dw8oj4xe7yug1" path="res://img/MPWSP01/menu sprites/menusprite1.png" id="7_0y5tw"]
 [ext_resource type="Texture2D" uid="uid://ctiuauq8e8rfp" path="res://img/MPWSP01/menu sprites/menusprite6.png" id="8_3nq7g"]
 [ext_resource type="Texture2D" uid="uid://cva3h0rgwoamh" path="res://img/MPWSP01/menu sprites/menusprite12.png" id="9_56avg"]
@@ -2379,7 +2379,7 @@ position = Vector2(283.5, 269.5)
 shape = SubResource("RectangleShape2D_372gc")
 
 [node name="Area2D2" type="Area2D" parent="."]
-script = ExtResource("6_xyde5")
+script = ExtResource("6_lrkmu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(247, 33.25)
