@@ -15,8 +15,17 @@ run/main_scene="res://escenas/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [display]
 
 window/size/viewport_height=649
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[global_group]
+
+globos=""
+globo_salud_max=""

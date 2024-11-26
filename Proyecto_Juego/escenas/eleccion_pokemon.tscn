@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhdcs2iolgi11"]
+[gd_scene load_steps=6 format=3 uid="uid://dhdcs2iolgi11"]
 
 [ext_resource type="Script" path="res://scripts/eleccion_pokemon.gd" id="1_64m7h"]
 [ext_resource type="Texture2D" uid="uid://d0l8fc47bls52" path="res://img/7921445.jpg" id="1_n0i3h"]
-[ext_resource type="PackedScene" uid="uid://lrao3adyo3qu" path="res://escenas/pokemon_planta.tscn" id="3_jmhtf"]
-[ext_resource type="PackedScene" uid="uid://bln4pa2prq8nh" path="res://escenas/pokemon_fuego.tscn" id="4_vt3js"]
-[ext_resource type="PackedScene" uid="uid://ds34igek6ffh0" path="res://escenas/pokemon_agua.tscn" id="5_0n6w3"]
-[ext_resource type="Script" path="res://scripts/pokemon_fuego.gd" id="5_cu3qb"]
+[ext_resource type="Texture2D" uid="uid://ci61lyhylrj4t" path="res://img/MPWSP01/attack effects/attack1.png" id="3_n5g0m"]
+[ext_resource type="Texture2D" uid="uid://dlx2hi8tp4fdl" path="res://img/MPWSP01/attack effects/attack4.png" id="4_hdo1i"]
+[ext_resource type="Texture2D" uid="uid://bbj36nqrc11ty" path="res://img/MPWSP01/attack effects/attack2.png" id="5_wmhje"]
 
 [node name="Eleccion_pokemon" type="Node2D"]
 script = ExtResource("1_64m7h")
@@ -20,17 +19,10 @@ offset_left = 498.0
 offset_top = 85.0
 offset_right = 714.0
 offset_bottom = 141.0
-text = "ELIJA SU COMPAÑERO"
+text = "ELIJA SU ATAQUE
+"
 
-[node name="Pokemon_planta" parent="." instance=ExtResource("3_jmhtf")]
-
-[node name="pokemon_fuego" parent="." instance=ExtResource("4_vt3js")]
-position = Vector2(251, 264)
-script = ExtResource("5_cu3qb")
-
-[node name="pokemon_agua" parent="." instance=ExtResource("5_0n6w3")]
-
-[node name="Button_planta" type="Button" parent="."]
+[node name="Button_agua2" type="Button" parent="."]
 offset_left = 275.0
 offset_top = 349.0
 offset_right = 402.0
@@ -46,7 +38,7 @@ offset_bottom = 381.0
 text = "Elegir"
 flat = true
 
-[node name="Button_agua" type="Button" parent="."]
+[node name="Button_energia" type="Button" parent="."]
 offset_left = 778.0
 offset_top = 347.0
 offset_right = 845.0
@@ -54,6 +46,23 @@ offset_bottom = 378.0
 text = "Elegir"
 flat = true
 
-[connection signal="pressed" from="Button_planta" to="." method="_on_button_planta_pressed"]
+[node name="Attack1" type="Sprite2D" parent="."]
+position = Vector2(328, 314)
+texture = ExtResource("3_n5g0m")
+offset = Vector2(1, 1)
+hframes = 4
+
+[node name="Attack4" type="Sprite2D" parent="."]
+position = Vector2(582, 315)
+texture = ExtResource("4_hdo1i")
+hframes = 4
+
+[node name="Attack2" type="Sprite2D" parent="."]
+position = Vector2(844, 323)
+texture = ExtResource("5_wmhje")
+hframes = 4
+frame = 1
+
+[connection signal="pressed" from="Button_agua2" to="." method="_on_button_planta_pressed"]
 [connection signal="pressed" from="Button_fuego" to="." method="_on_button_fuego_pressed"]
-[connection signal="pressed" from="Button_agua" to="." method="_on_button_agua_pressed"]
+[connection signal="pressed" from="Button_energia" to="." method="_on_button_agua_pressed"]

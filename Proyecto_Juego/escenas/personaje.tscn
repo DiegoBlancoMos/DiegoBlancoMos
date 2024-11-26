@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://crqqqekxigc43"]
+[gd_scene load_steps=28 format=3 uid="uid://crqqqekxigc43"]
 
 [ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_hxdyc"]
 [ext_resource type="Texture2D" uid="uid://sx1jdx2ptj3j" path="res://img/MainGuySpriteSheet.png" id="1_qngw7"]
 [ext_resource type="PackedScene" uid="uid://dj5mcdbe2gg4r" path="res://escenas/ataque.tscn" id="2_kpc11"]
 [ext_resource type="Texture2D" uid="uid://vvssy5solpl8" path="res://img/pngegg.png" id="3_cewux"]
 [ext_resource type="Script" path="res://escenas/area_2d.gd" id="4_pb1si"]
+[ext_resource type="PackedScene" uid="uid://cp2jo25c7j8pf" path="res://globo1.tscn" id="4_r4fb5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ayao6"]
 atlas = ExtResource("1_qngw7")
@@ -193,6 +194,9 @@ frame_progress = 0.365589
 position = Vector2(2, -5)
 shape = SubResource("CapsuleShape2D_3ry2t")
 
+[node name="globo" parent="." instance=ExtResource("4_r4fb5")]
+position = Vector2(-370, -192)
+
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("4_pb1si")
 
@@ -203,8 +207,8 @@ shape = SubResource("CapsuleShape2D_ys6db")
 [node name="Corazon1" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Corazon1"]
-position = Vector2(-27, 207)
-scale = Vector2(0.0433333, 0.0483334)
+position = Vector2(-32.25, 202.625)
+scale = Vector2(0.0783333, 0.0775)
 sprite_frames = SubResource("SpriteFrames_eucxm")
 animation = &"lleno"
 
@@ -215,8 +219,8 @@ shape = SubResource("CircleShape2D_q0pet")
 [node name="Corazon2" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Corazon2"]
-position = Vector2(-7, 207)
-scale = Vector2(0.0433333, 0.0483334)
+position = Vector2(-7, 203)
+scale = Vector2(0.078, 0.087)
 sprite_frames = SubResource("SpriteFrames_eucxm")
 animation = &"lleno"
 
@@ -227,8 +231,8 @@ shape = SubResource("CircleShape2D_q0pet")
 [node name="Corazon3" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Corazon3"]
-position = Vector2(13, 207)
-scale = Vector2(0.0433333, 0.0483334)
+position = Vector2(18, 203)
+scale = Vector2(0.078, 0.087)
 sprite_frames = SubResource("SpriteFrames_eucxm")
 animation = &"medio"
 
@@ -236,5 +240,13 @@ animation = &"medio"
 position = Vector2(306, -557)
 shape = SubResource("CircleShape2D_q0pet")
 
+[node name="GlobosLabel" type="Label" parent="."]
+modulate = Color(0.000113828, 0.000113828, 0.000113828, 1)
+offset_left = -342.0
+offset_top = -211.0
+offset_right = -302.0
+offset_bottom = -188.0
+text = "0
+"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -5,7 +5,10 @@ extends CharacterBody2D
 @onready var anim_player1 = $Corazon1/AnimatedSprite2D
 @onready var anim_player2 = $Corazon2/AnimatedSprite2D
 @onready var anim_player3 = $Corazon3/AnimatedSprite2D
+@onready var globos_label = $GlobosLabel  # Aquí obtenemos la referencia al Label para los globos
+
 var salud = 6
+var count_globos = 0
 var attack_direction = Vector2.DOWN  
 @export var attack_scene : PackedScene
 
@@ -130,4 +133,42 @@ func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
 			anim_player2.play("vacio")
 			anim_player3.play("vacio")	
 		
-	
+	if body.is_in_group("balon"):
+		print("Balón hizo daño")
+		salud -= 1
+		if salud == 5:
+			anim_player1.play("lleno")
+			anim_player2.play("lleno")
+			anim_player3.play("medio")
+		if salud == 4:
+			anim_player1.play("lleno")
+			anim_player2.play("lleno")
+			anim_player3.play("vacio")
+		if salud == 3:
+			anim_player1.play("lleno")
+			anim_player2.play("medio")
+			anim_player3.play("vacio")
+		if salud == 2:
+			anim_player1.play("lleno")
+			anim_player2.play("vacio")
+			anim_player3.play("vacio")	
+		if salud == 1:
+			anim_player1.play("medio")
+			anim_player2.play("vacio")
+			anim_player3.play("vacio")
+		if salud == 0:
+			anim_player1.play("vacio")
+			anim_player2.play("vacio")
+			anim_player3.play("vacio")
+			print ("Personaje murió")
+			get_tree().change_scene_to_file("res://escenas/muerte.tscn")
+			
+	if body.is_in_group("globo_salud_max"):
+			anim_player1.play("lleno")
+			anim_player2.play("lleno")
+			anim_player3.play("lleno")
+
+	if body.is_in_group("globos"):
+		Global.count_globos += 1  # Usamos el contador global
+		print("Contador Globos: " + str(Global.count_globos))
+		globos_label.text = str(Global.count_globos)  # Mostrar el contador en el Label
