@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://b3st67ieac5mc"]
+[gd_scene load_steps=23 format=3 uid="uid://b3st67ieac5mc"]
 
 [ext_resource type="Texture2D" uid="uid://d15nvv8wgbag3" path="res://img/Sprites [Enemies]/Bomb/Bomb.png" id="1_iwvx2"]
 [ext_resource type="Script" path="res://scripts/bomba.gd" id="1_mco5y"]
+[ext_resource type="AudioStream" uid="uid://bbpvoeg3n51nl" path="res://audio/bomba.wav" id="3_amflj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ubd0t"]
 atlas = ExtResource("1_iwvx2")
@@ -152,5 +153,8 @@ shape = SubResource("CircleShape2D_duovy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_anbu1")
+
+[node name="Bomba" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_amflj")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

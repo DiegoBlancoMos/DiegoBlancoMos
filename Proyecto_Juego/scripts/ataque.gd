@@ -10,7 +10,13 @@ var direction : Vector2  # Dirección hacia la que se mueve el proyectil
 func _ready():
 	# Mueve el proyectil en la dirección dada
 	set_collision_mask_value(0, true)
-	anim_player.play("attack")  # Habilitar la máscara de colisión si es necesario
+	if Global.attack==2:
+		anim_player.play("attack2")
+	if Global.attack==1:
+		anim_player.play("attack1")  # Habilitar la máscara de colisión si es necesario
+	if Global.attack==0:
+		anim_player.play("attack")  # Habilitar la máscara de colisión si es necesario
+  # Habilitar la máscara de colisión si es necesario
 
 # Actualiza el movimiento del proyectil
 func _process(delta: float) -> void:

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhixwob8hvske"
+path="res://.godot/imported/Level Up Tonight (1).mp3-0598e723605623b05d4e55fea8a3dc15.mp3str"
+
+[deps]
+
+source_file="res://audio/Level Up Tonight (1).mp3"
+dest_files=["res://.godot/imported/Level Up Tonight (1).mp3-0598e723605623b05d4e55fea8a3dc15.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

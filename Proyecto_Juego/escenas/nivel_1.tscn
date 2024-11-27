@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bogbec1gckh25"]
+[gd_scene load_steps=29 format=4 uid="uid://bogbec1gckh25"]
 
 [ext_resource type="Script" path="res://scripts/spawnBalon2.gd" id="1_84aho"]
 [ext_resource type="Texture2D" uid="uid://c3ovmyr4nh0j8" path="res://img/MPWSP01/tileset/tileset.png" id="1_jwhat"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cp2jo25c7j8pf" path="res://globo1.tscn" id="6_o0ie6"]
 [ext_resource type="Texture2D" uid="uid://8beuw6eniqbf" path="res://img/overworld.png" id="7_orryt"]
 [ext_resource type="PackedScene" uid="uid://um1mw7v5hgbn" path="res://escenas/globo_2.tscn" id="9_t2qxi"]
+[ext_resource type="AudioStream" uid="uid://dhixwob8hvske" path="res://audio/Level Up Tonight (1).mp3" id="12_v1k2i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6dds"]
 texture = ExtResource("1_jwhat")
@@ -3677,6 +3678,10 @@ shape = SubResource("RectangleShape2D_48a1o")
 
 [node name="SpawnBalon2" type="Timer" parent="."]
 wait_time = 1.5
+
+[node name="LevelUpTonight(1)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_v1k2i")
+autoplay = true
 
 [connection signal="body_entered" from="volver" to="volver" method="_on_body_entered"]
 [connection signal="timeout" from="SpawnBalon" to="." method="_on_spawn_balon_timeout"]

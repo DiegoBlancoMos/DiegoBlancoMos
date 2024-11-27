@@ -1,26 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://dk5c1n325y5uw"]
+[gd_scene load_steps=8 format=3 uid="uid://dk5c1n325y5uw"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_vdhc5"]
 [ext_resource type="FontFile" uid="uid://dpato32pu35tk" path="res://img/obedient-boy/ObedientBoyDemoRegular.ttf" id="2_p3vcl"]
-[ext_resource type="Texture2D" uid="uid://d3n07dhkfohvx" path="res://img/rayquaza.png" id="3_0k3mk"]
-[ext_resource type="Texture2D" uid="uid://c048w2htoxbh8" path="res://img/moltres.png" id="4_aaqrp"]
-[ext_resource type="Texture2D" uid="uid://dfresscs0jveo" path="res://img/International_Pokémon_logo.svg.png" id="5_aomfr"]
+[ext_resource type="Texture2D" uid="uid://dsidghlhe6tv4" path="res://img/Sprites [Enemies]/Balloon/Balloon_1/Dash/Dash_L_1.png" id="3_r8kqn"]
+[ext_resource type="Texture2D" uid="uid://dw1cvhs8fnvug" path="res://img/Sprites [Enemies]/Balloon/Balloon_2/Dash/Dash_L_1.png" id="4_rq2jt"]
+[ext_resource type="Texture2D" uid="uid://b345o6xvewjam" path="res://img/Sprites [Enemies]/Balloon/Balloon_3/Dash/Dash_L_1.png" id="5_q5e0c"]
+[ext_resource type="Texture2D" uid="uid://cl1k471p6p0m2" path="res://img/Sprites [Enemies]/Balloon/Balloon_4/Dash/Dash_L_1.png" id="6_pdhoq"]
+[ext_resource type="AudioStream" uid="uid://cobcny80bibsf" path="res://audio/4 AM Rave.mp3" id="7_0v11k"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_vdhc5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -835.0
-offset_top = -179.0
+offset_left = -975.0
+offset_top = -302.0
 offset_right = 317.0
 offset_bottom = 481.0
-color = Color(0.23108, 0.739956, 0.24122, 1)
+color = Color(0.832689, 0.481782, 0.752819, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = -537.0
-offset_top = 189.0
-offset_right = -6.0
-offset_bottom = 280.0
+offset_left = -684.0
+offset_top = 84.0
+offset_right = 37.9999
+offset_bottom = 254.0
 scale = Vector2(1.2, 1.84347)
 
 [node name="Button_play" type="Button" parent="VBoxContainer"]
@@ -42,19 +44,29 @@ limit_top = -181
 limit_right = 319
 limit_bottom = 181
 
-[node name="InternationalPokémonLogo_svg" type="Sprite2D" parent="."]
-position = Vector2(-234, 64)
-scale = Vector2(0.669922, 0.601064)
-texture = ExtResource("5_aomfr")
+[node name="DashL1" type="Sprite2D" parent="."]
+position = Vector2(209, 235)
+scale = Vector2(2.59375, 2.78125)
+texture = ExtResource("3_r8kqn")
 
-[node name="Rayquaza" type="Sprite2D" parent="."]
-position = Vector2(276, 302)
-scale = Vector2(1.13789, 1.17158)
-texture = ExtResource("3_0k3mk")
+[node name="DashL2" type="Sprite2D" parent="."]
+position = Vector2(-710, 230)
+scale = Vector2(2.5, 2.46875)
+texture = ExtResource("4_rq2jt")
 
-[node name="Moltres" type="Sprite2D" parent="."]
-position = Vector2(-653, 279)
-texture = ExtResource("4_aaqrp")
+[node name="DashL3" type="Sprite2D" parent="."]
+position = Vector2(-435, 293)
+scale = Vector2(2.25, 2.40625)
+texture = ExtResource("5_q5e0c")
+
+[node name="DashL4" type="Sprite2D" parent="."]
+position = Vector2(-57, 290)
+scale = Vector2(2.40625, 2.65625)
+texture = ExtResource("6_pdhoq")
+
+[node name="4AmRave" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_0v11k")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button_play" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_quit" to="." method="_on_button_quit_pressed"]

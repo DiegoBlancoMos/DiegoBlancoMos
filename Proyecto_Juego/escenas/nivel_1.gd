@@ -20,7 +20,7 @@ func spawn_enemy():
 
 
 	# Colocar el nuevo enemigo en una posición aleatoria (por ejemplo, en la parte superior de la pantalla)
-	var spawn_position = Vector2(-169, -196)  # Ajusta las coordenadas de spawn como desees
+	var spawn_position = Vector2(123, 123)  # Ajusta las coordenadas de spawn como desees
 	new_enemy.position = spawn_position
 
 	# Agregar el enemigo a la escena
