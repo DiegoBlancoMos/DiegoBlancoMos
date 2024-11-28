@@ -20,7 +20,7 @@ func spawn_enemy():
 
 
 	# Colocar el nuevo enemigo en una posición aleatoria (por ejemplo, en la parte superior de la pantalla)
-	var spawn_position = Vector2(-169, -196)  # Ajusta las coordenadas de spawn como desees
+	var spawn_position = Vector2(291, 0)  # Ajusta las coordenadas de spawn como desees
 	new_enemy.position = spawn_position
 
 	# Agregar el enemigo a la escena
@@ -31,7 +31,7 @@ func _on_spawn_balon_timeout() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Personaje":
+	if body.name == "Personaje" and Global.count_globos >= 20:
 		get_tree().change_scene_to_file("res://escenas/nivel2.tscn")
 
 		

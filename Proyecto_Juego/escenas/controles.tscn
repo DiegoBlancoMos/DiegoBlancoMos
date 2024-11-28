@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpvv667nfxh2o"]
+
+[ext_resource type="Texture2D" uid="uid://i1i3rnc20m4n" path="res://escenas/Captura de pantalla 2024-11-27 123501.jpg" id="1_f8c6k"]
+[ext_resource type="Script" path="res://scripts/controles.gd" id="1_gbwov"]
+[ext_resource type="Texture2D" uid="uid://dsidghlhe6tv4" path="res://img/Sprites [Enemies]/Balloon/Balloon_1/Dash/Dash_L_1.png" id="2_hjt2x"]
+[ext_resource type="Texture2D" uid="uid://b345o6xvewjam" path="res://img/Sprites [Enemies]/Balloon/Balloon_3/Dash/Dash_L_1.png" id="3_vm8ky"]
+[ext_resource type="Texture2D" uid="uid://cl1k471p6p0m2" path="res://img/Sprites [Enemies]/Balloon/Balloon_4/Dash/Dash_L_1.png" id="4_jpcno"]
+[ext_resource type="Texture2D" uid="uid://bnus81wrni5wk" path="res://img/keyboard-arrow-keys-stroke-icon-a8ee34.webp" id="5_t0r3v"]
+[ext_resource type="Texture2D" uid="uid://bhpb4latd0rwb" path="res://img/espacio teclado.webp" id="6_dk3rd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gbwov")
+
+[node name="CapturaDePantalla2024-11-27123501" type="Sprite2D" parent="."]
+position = Vector2(727, 400)
+texture = ExtResource("1_f8c6k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -9.0
+offset_right = 40.0
+offset_bottom = 31.0
+scale = Vector2(38.7284, 20.1962)
+color = Color(1, 0.203922, 0.152941, 0.8)
+
+[node name="DashL1" type="Sprite2D" parent="."]
+position = Vector2(792, 163)
+scale = Vector2(3.53125, 3.53125)
+texture = ExtResource("2_hjt2x")
+
+[node name="DashL2" type="Sprite2D" parent="."]
+position = Vector2(799, 366)
+scale = Vector2(3.59375, 3.46875)
+texture = ExtResource("3_vm8ky")
+
+[node name="DashL3" type="Sprite2D" parent="."]
+position = Vector2(805, 555)
+scale = Vector2(3.6875, 3.6875)
+texture = ExtResource("4_jpcno")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 906.0
+offset_top = 145.0
+offset_right = 1108.0
+offset_bottom = 194.0
+text = "Coleccionables necesarios 
+para ganar el juego"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 918.0
+offset_top = 358.0
+offset_right = 1052.0
+offset_bottom = 407.0
+text = "Globo que te da 
+curación máxima"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 915.0
+offset_top = 568.0
+offset_right = 1147.0
+offset_bottom = 617.0
+text = "Globo que te cura
+      1/2 corazón"
+
+[node name="Keyboard-arrow-keys-stroke-icon-a8Ee34" type="Sprite2D" parent="."]
+position = Vector2(266, 198)
+scale = Vector2(-0.47625, 0.358395)
+texture = ExtResource("5_t0r3v")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 132.0
+offset_top = 309.0
+offset_right = 404.0
+offset_bottom = 332.0
+text = "Usamos las flechas para movernos "
+
+[node name="EspacioTeclado" type="Sprite2D" parent="."]
+position = Vector2(273, 533)
+scale = Vector2(0.554444, 0.478889)
+texture = ExtResource("6_dk3rd")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 153.0
+offset_top = 611.0
+offset_right = 386.0
+offset_bottom = 634.0
+text = "Usamos espacio para disparar
+"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 506.0
+offset_top = 579.0
+offset_right = 673.0
+offset_bottom = 630.0
+text = "VOLVER"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

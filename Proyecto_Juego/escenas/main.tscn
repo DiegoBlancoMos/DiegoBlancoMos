@@ -8486,7 +8486,7 @@ tile_set = SubResource("TileSet_ekujt")
 position = Vector2(507, -185)
 
 [node name="Personaje" parent="." instance=ExtResource("10_dgkcr")]
-position = Vector2(181, -2)
+position = Vector2(-14, -142)
 
 [node name="geodude1" parent="." instance=ExtResource("11_mehrc")]
 position = Vector2(36, -186)

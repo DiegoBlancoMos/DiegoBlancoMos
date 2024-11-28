@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfv28a8ybd7kf"]
+
+[ext_resource type="Script" path="res://scripts/volumeen.gd" id="1_177f2"]
+[ext_resource type="FontFile" uid="uid://bo4ise0pw8yvk" path="res://img/arcade-classic/ArcadeClassic.ttf" id="2_pxt8k"]
+[ext_resource type="PackedScene" uid="uid://cocwpc5lwigtg" path="res://volumen.tscn" id="3_ag3ob"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_177f2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 895.0
+offset_bottom = 414.0
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.027451, 0.0235294, 0.0392157, 1)
+offset_left = 404.0
+offset_top = 134.0
+offset_right = 503.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("2_pxt8k")
+theme_override_font_sizes/font_size = 30
+text = "VOLUME"
+
+[node name="volumen" parent="." instance=ExtResource("3_ag3ob")]
+offset_left = 295.0
+offset_top = 139.0
+offset_right = 634.0
+offset_bottom = 293.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 415.0
+offset_top = 284.0
+offset_right = 506.0
+offset_bottom = 318.0
+theme_override_fonts/font = ExtResource("2_pxt8k")
+theme_override_font_sizes/font_size = 25
+text = "VOLVER"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

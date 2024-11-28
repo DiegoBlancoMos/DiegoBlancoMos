@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxk157hjlseqt"]
+[gd_scene load_steps=4 format=3 uid="uid://bxk157hjlseqt"]
 
 [ext_resource type="Script" path="res://Scripts/muerte.gd" id="1_ex7k5"]
 [ext_resource type="FontFile" uid="uid://dpato32pu35tk" path="res://img/obedient-boy/ObedientBoyDemoRegular.ttf" id="2_r8nsl"]
+[ext_resource type="FontFile" uid="uid://bo4ise0pw8yvk" path="res://img/arcade-classic/ArcadeClassic.ttf" id="3_fajvy"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(2, 5)
 script = ExtResource("1_ex7k5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -13,10 +15,10 @@ scale = Vector2(2.6, 2.68)
 color = Color(1.08294e-06, 0, 0.482101, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 252.0
-offset_top = 274.0
-offset_right = 794.0
-offset_bottom = 577.0
+offset_left = 254.0
+offset_top = 316.0
+offset_right = 796.0
+offset_bottom = 619.0
 scale = Vector2(1.22007, 1.16)
 
 [node name="volverjugar" type="Button" parent="VBoxContainer"]
@@ -32,6 +34,15 @@ theme_override_fonts/font = ExtResource("2_r8nsl")
 theme_override_font_sizes/font_size = 20
 text = "eXIT
 "
+
+[node name="Label" type="Label" parent="."]
+offset_left = 241.0
+offset_top = 107.0
+offset_right = 920.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("3_fajvy")
+theme_override_font_sizes/font_size = 150
+text = "GAME OVER"
 
 [connection signal="pressed" from="VBoxContainer/volverjugar" to="." method="_on_volverjugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cocwpc5lwigtg"]
+
+[ext_resource type="Script" path="res://scripts/volumen.gd" id="1_g37om"]
+
+[node name="volumen" type="HSlider"]
+offset_left = 317.0
+offset_top = 39.0
+offset_right = 656.0
+offset_bottom = 193.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("1_g37om")

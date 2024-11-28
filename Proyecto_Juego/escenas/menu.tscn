@@ -1,28 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://dk5c1n325y5uw"]
+[gd_scene load_steps=10 format=3 uid="uid://dk5c1n325y5uw"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_vdhc5"]
+[ext_resource type="Texture2D" uid="uid://i1i3rnc20m4n" path="res://escenas/Captura de pantalla 2024-11-27 123501.jpg" id="2_bssrs"]
 [ext_resource type="FontFile" uid="uid://dpato32pu35tk" path="res://img/obedient-boy/ObedientBoyDemoRegular.ttf" id="2_p3vcl"]
 [ext_resource type="Texture2D" uid="uid://dsidghlhe6tv4" path="res://img/Sprites [Enemies]/Balloon/Balloon_1/Dash/Dash_L_1.png" id="3_r8kqn"]
 [ext_resource type="Texture2D" uid="uid://dw1cvhs8fnvug" path="res://img/Sprites [Enemies]/Balloon/Balloon_2/Dash/Dash_L_1.png" id="4_rq2jt"]
 [ext_resource type="Texture2D" uid="uid://b345o6xvewjam" path="res://img/Sprites [Enemies]/Balloon/Balloon_3/Dash/Dash_L_1.png" id="5_q5e0c"]
 [ext_resource type="Texture2D" uid="uid://cl1k471p6p0m2" path="res://img/Sprites [Enemies]/Balloon/Balloon_4/Dash/Dash_L_1.png" id="6_pdhoq"]
 [ext_resource type="AudioStream" uid="uid://cobcny80bibsf" path="res://audio/4 AM Rave.mp3" id="7_0v11k"]
+[ext_resource type="FontFile" uid="uid://bo4ise0pw8yvk" path="res://img/arcade-classic/ArcadeClassic.ttf" id="9_gkt1p"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_vdhc5")
 
+[node name="CapturaDePantalla2024-11-27123501" type="Sprite2D" parent="."]
+position = Vector2(-238, 127)
+scale = Vector2(1.08953, 1.2013)
+texture = ExtResource("2_bssrs")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -975.0
 offset_top = -302.0
-offset_right = 317.0
-offset_bottom = 481.0
-color = Color(0.832689, 0.481782, 0.752819, 1)
+offset_right = 490.0
+offset_bottom = 515.0
+color = Color(0.361931, 0.690678, 0.645378, 0.639216)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = -684.0
-offset_top = 84.0
-offset_right = 37.9999
-offset_bottom = 254.0
+offset_top = 29.0
+offset_right = 38.0
+offset_bottom = 199.0
 scale = Vector2(1.2, 1.84347)
 
 [node name="Button_play" type="Button" parent="VBoxContainer"]
@@ -30,6 +37,19 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_p3vcl")
 theme_override_font_sizes/font_size = 20
 text = "PLAY"
+
+[node name="Button_instruciones" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_p3vcl")
+theme_override_font_sizes/font_size = 20
+text = "HOW TO PLAY"
+
+[node name="Button_opciones" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_p3vcl")
+theme_override_font_sizes/font_size = 20
+text = "OPCIONES"
 
 [node name="Button_quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -68,5 +88,16 @@ texture = ExtResource("6_pdhoq")
 stream = ExtResource("7_0v11k")
 autoplay = true
 
+[node name="Label" type="Label" parent="."]
+offset_left = -616.0
+offset_top = -138.0
+offset_right = 127.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("9_gkt1p")
+theme_override_font_sizes/font_size = 150
+text = "BeeBaBomb"
+
 [connection signal="pressed" from="VBoxContainer/Button_play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_instruciones" to="." method="_on_button_instruciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_opciones" to="." method="_on_button_opciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_quit" to="." method="_on_button_quit_pressed"]

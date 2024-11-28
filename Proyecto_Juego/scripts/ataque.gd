@@ -25,5 +25,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("abeja") or body.is_in_group("balon") or body.is_in_group("bomba"):  # Asegúrate de que las abejas estén en el grupo "abeja"
+		Global.enemigo += 1
+		print("HAS MATADO A " + str(Global.enemigo) + "ENEMIGOS")
 		body.queue_free()  # Eliminar la abeja
 		queue_free()  # Eliminar el proyectil
