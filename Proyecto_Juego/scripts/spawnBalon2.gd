@@ -25,8 +25,6 @@ func _on_server_responded(result, response_code, headers, body):
 	positionX = response.positionX
 	positionY = response.positionY
 # Función llamada cada vez que el Timer se dispara
-
-# Función llamada cada vez que el Timer se dispara
 func _on_EnemySpawnTimer_timeout():
 	spawn_enemy()
 
