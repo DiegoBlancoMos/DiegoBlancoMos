@@ -41,9 +41,9 @@ text = "Play Again"
 
 [node name="Label2" type="Label" parent="."]
 modulate = Color(0.00392157, 0.0980392, 0.0156863, 1)
-offset_left = 495.0
+offset_left = 481.0
 offset_top = 336.0
-offset_right = 674.0
+offset_right = 660.0
 offset_bottom = 362.0
 theme_override_fonts/font = ExtResource("2_2pd3q")
 theme_override_font_sizes/font_size = 25
@@ -51,9 +51,9 @@ text = "aaaaaaaaaaaaa"
 
 [node name="Label3" type="Label" parent="."]
 modulate = Color(0.0188678, 0.0448295, 0.0267435, 1)
-offset_left = 496.0
+offset_left = 478.0
 offset_top = 373.0
-offset_right = 675.0
+offset_right = 657.0
 offset_bottom = 416.0
 theme_override_fonts/font = ExtResource("2_2pd3q")
 theme_override_font_sizes/font_size = 25
