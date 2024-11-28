@@ -36,3 +36,11 @@ def score(request):
 def bee(request):
 	if request.method == 'GET':
 		return JsonResponse({"positionX": random.choice([-169, 62]), "positionY": random.choice([-196, -62])})
+
+def ball(request):
+	if request.method == 'GET':
+		return JsonResponse({"positionX": random.choice([0, 62,260]), "positionY": random.choice([196, -62])})
+
+def bomb(request):
+	if request.method == 'GET':
+		return JsonResponse({"positionX": random.choice([259,82]), "positionY": random.choice([-196,64])})

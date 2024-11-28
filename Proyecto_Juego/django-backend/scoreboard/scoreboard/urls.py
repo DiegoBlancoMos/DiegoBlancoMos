@@ -20,4 +20,6 @@ from rest_app import endpoints
 urlpatterns = [
     path('score', endpoints.score),
     path('bee_spawn_pos', endpoints.bee),
+    path('ball_spawn_pos', endpoints.ball),
+    path('bomb_spawn_pos', endpoints.bomb),
 ]
